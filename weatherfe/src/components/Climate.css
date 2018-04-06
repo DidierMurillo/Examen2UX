@@ -1,0 +1,24 @@
+.JumboProduct{
+	width: 150px;
+	margin-left: 10%; 
+	margin-right:5%;
+	margin-top:3%;
+	padding-bottom: 0%;
+	padding-top: 2%;
+	border-radius: 15px;
+	background-color: lightblue;
+}
+
+.Town{
+	text-align:center;
+}
+
+.Status{
+	text-align:center;
+	color: blue;
+}
+
+.Temperature{
+	text-align:center;
+	color: #6600cc;
+}
