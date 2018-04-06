@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Climate from './Climate'
 import update from 'immutability-helper'
-import 'ClimatesContainer.css'
+import './ClimatesContainer.css'
+import {Jumbotron} from 'reactstrap'
 
 
 class ClimatesContainer extends Component {
@@ -65,16 +66,14 @@ class ClimatesContainer extends Component {
     render() {
     	return (
     <div>
-      <div>
+      
       	{this.state.climates.map((climate) => {
   			return (<Climate climate={climate} key={climate.id} />)
 		})}
-	  </div>		
+	  		
 	  
-	  <div>
-			
-					
-			<footer>
+  		<Jumbotron className='J'>		
+			<form className='Form'>
  	 			<input className='input' type="text"
     				name="ttown" placeholder='Enter Town'
     				onChange={this.TownInput} />
@@ -89,14 +88,14 @@ class ClimatesContainer extends Component {
 
   				</select> 	
 
-			</footer>
-
-			<button className="newclimate"
-  				onClick={this.addNewIdea} >
-  				New Climate Historial
-			</button>
-
-		</div>		
+			</form>
+			
+				<button className="newclimate"
+	  				onClick={this.addNewIdea} >
+	  				New Climate Historial
+				</button>
+		</Jumbotron>
+		
 
 
 
